@@ -4,7 +4,7 @@ class MyModel
 {
     public static function getDataFromCSV($param)
     {
-        $csv_path = 'path/to/csv/file.csv';
+        $csv_path = 'data/app-data.csv';
         $file = fopen($csv_path, 'r');
         while (($line = fgetcsv($file)) !== FALSE) {
             if($line[0] == $param) {
