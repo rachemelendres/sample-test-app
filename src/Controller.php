@@ -1,21 +1,26 @@
 <?php
-if(isset($_GET["action"]) && $_GET["action"] == "fetch_data"){
-    // Open the CSV file
-    $file = fopen("../data/app-data.csv", "r");
 
-    // Initialize an empty array to store the data
-    $data = array();
+class MyDataController {
+  public function fetchData() {
+      // Open the CSV file
+      $file = fopen("../data/app-data.csv", "r");
 
-    // Iterate over each line in the file
-    while (($line = fgetcsv($file)) !== false) {
-        // Add the line of data to the array
-        $data[] = $line;
-    }
+      // Initialize an empty array to store the data
+      $data = array();
 
-    // Close the file
-    fclose($file);
+      // Iterate over each line in the file
+      while (($line = fgetcsv($file)) !== false) {
+          // Add the line of data to the array
+          $data[] = $line;
+      }
 
-    // Return the data as JSON
-    header('Content-Type: application/json');
-    echo json_encode($data);
+      // Close the file
+      fclose($file);
+
+      // Return the data as JSON
+      header('Content-Type: application/json');
+      echo json_encode($data);
+  }
 }
+$controller = new MyDataController();
+$controller->fetchData();

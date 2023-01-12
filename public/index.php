@@ -1,9 +1,23 @@
 <html>
 <head>
-  <script>
+  <title>My Sample App</title>
+</head>
+<body>
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th>Key</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</body>
+<script>
     function fetchData() {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', '../src/Controller.php?action=fetch_data', true);
+        xhr.open('GET', '../src/Controller.php?action=fetchData', true);
         xhr.onload = function() {
             if (xhr.status === 200) {
                 var data = JSON.parse(xhr.responseText);
@@ -24,17 +38,4 @@
     }
     fetchData();
   </script>
-</head>
-<body>
-  <table id="data-table">
-    <thead>
-      <tr>
-        <th>Key</th>
-        <th>Value</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
-</body>
 </html>
