@@ -1,17 +1,21 @@
 <?php
-class MyAjaxController
-{
-    public function getRequest(Request $request)
-    {
-        // get the request parameters
-        $param1 = $request->query->get('param1');
+if(isset($_GET["action"]) && $_GET["action"] == "fetch_data"){
+    // Open the CSV file
+    $file = fopen("../data/app-data.csv", "r");
 
-        // Do something with the parameters, for example call a service or a model
-        $data = MyModel::getDataFromCSV($param1);
+    // Initialize an empty array to store the data
+    $data = array();
 
-        // Return a JSON response
-        return new JsonResponse(['key' => $data]);
+    // Iterate over each line in the file
+    while (($line = fgetcsv($file)) !== false) {
+        // Add the line of data to the array
+        $data[] = $line;
     }
+
+    // Close the file
+    fclose($file);
+
+    // Return the data as JSON
+    header('Content-Type: application/json');
+    echo json_encode($data);
 }
-
-
