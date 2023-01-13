@@ -1,9 +1,13 @@
 <?php
 
+namespace App;
+
 class MyDataController {
   public function fetchData() {
       // Open the CSV file
-      $file = fopen("../data/app-data.csv", "r");
+      $filePath = __DIR__."/../data/app-data.csv";
+
+      $file = fopen($filePath, "r");
 
       // Initialize an empty array to store the data
       $data = array();
@@ -18,8 +22,9 @@ class MyDataController {
       fclose($file);
 
       // Return the data as JSON
-      header('Content-Type: application/json');
+      // header('Content-Type: application/json');
       echo json_encode($data);
+      return json_encode($data);
   }
 }
 $controller = new MyDataController();

@@ -17,7 +17,7 @@
 <script>
     function fetchData() {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', '../src/Controller.php?action=fetchData', true);
+        xhr.open('GET', '../src/MyDataController.php?action=fetchData', true);
         xhr.onload = function() {
             if (xhr.status === 200) {
                 var data = JSON.parse(xhr.responseText);
