@@ -16,6 +16,12 @@
 
             "App\\":"src/"
         }
+    },
+
+    "scripts": {
+        "test": "php ./vendor/bin/phpunit" 
+
+
     }
 
 
