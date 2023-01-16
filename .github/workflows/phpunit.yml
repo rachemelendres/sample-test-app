@@ -65,11 +65,5 @@ jobs:
       - name: Install Node dependencies
         run: npm ci
 
-      - name: Install http-server
-        run: npm install -g http-server
-
-      - name: Start local web server
-        run: npx http-server
-        
       - name: Run Unit Test for JS
         run: npx mocha tests/fetchtest.js
