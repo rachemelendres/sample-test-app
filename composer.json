@@ -3,6 +3,7 @@
         "name": "rlm-projects/sample-test-app",
         "description": "A PHP app that demonstrates retrieving data from a csv file and outputs it in a table",
         "type": "project",
+        "license": "MIT",
         "require": {
             "php": ">=7.3"
         },

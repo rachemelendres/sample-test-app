@@ -3,7 +3,7 @@
         'name' => 'rlm-projects/sample-test-app',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '4686b9de5bdb9b31237f8228890bc02425d60ffa',
+        'reference' => '737e7a0fa01917403143438e8980969c32ca69f4',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -112,7 +112,7 @@
         'rlm-projects/sample-test-app' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '4686b9de5bdb9b31237f8228890bc02425d60ffa',
+            'reference' => '737e7a0fa01917403143438e8980969c32ca69f4',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
