@@ -14,6 +14,7 @@ describe('fetchData', () => {
                 expect(res).to.have.status(200);
                 expect(res.body).to.be.an('object');
                 // Do additional tests on the data here if necessary
+             
                 done();
             });
     });
