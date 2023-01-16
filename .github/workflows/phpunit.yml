@@ -54,12 +54,12 @@ jobs:
       - name: Run Unit Test
         run: composer test
 
-        name: Setup Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: 12
 
-        name: Install Mocha and Chai
+      - name: Install Mocha and Chai
         run: npm install -g mocha chai
 
       - name: Install Node dependencies
