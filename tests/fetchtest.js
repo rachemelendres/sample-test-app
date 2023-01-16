@@ -6,7 +6,7 @@ chai.use(chaiHttp);
 
 describe('fetchData', () => {
     it('should fetch data and display it in a table', (done) => {
-        chai.request('http://localhost/sample-test-app')
+        chai.request('http://sample-test-app.opendata.org.ph/')
             .get('/src/MyDataController.php/?action=fetchData')
             .end((err, res) => {
                 console.log(res)
