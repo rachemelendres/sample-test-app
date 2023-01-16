@@ -20,3 +20,4 @@ function fetchData() {
   xhr.send();
 }
 fetchData();
+// console.log(fetchData);
