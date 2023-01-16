@@ -60,10 +60,16 @@ jobs:
           node-version: 12
 
       - name: Install Mocha and Chai
-        run: npm install -g mocha chai
+        run: npm install -g mocha chai chai-http
 
       - name: Install Node dependencies
         run: npm ci
 
+      - name: Install http-server
+        run: npm install -g http-server
+
+      - name: Start local web server
+        run: npx http-server
+        
       - name: Run Unit Test for JS
         run: npx mocha tests/fetchtest.js
