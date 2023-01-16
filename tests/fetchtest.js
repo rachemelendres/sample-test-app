@@ -6,6 +6,7 @@ chai.use(chaiHttp);
 
 describe('fetchData', () => {
     it('should fetch data and display it in a table', (done) => {
+        // use endpoint in the prod
         chai.request('http://sample-test-app.opendata.org.ph/')
             .get('/src/MyDataController.php/?action=fetchData')
             .end((err, res) => {
