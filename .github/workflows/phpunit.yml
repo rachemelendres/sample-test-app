@@ -54,12 +54,18 @@ jobs:
       - name: Run Unit Test
         run: composer test
 
-      - name: Upload coverage results to Coveralls
-        env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          composer global require php-coveralls/php-coveralls
-          php-coveralls --coverage_clover=build/logs/clover.xml -v
+      - name: "Run test suite"
+        run: "vendor/bin/phpunit --coverage-clover=coverage.xml"
+        
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./coverage.xml
+          flags: tests
+          name: codecov-umbrella
+          yml: ./codecov.yml
+          fail_ci_if_error: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
