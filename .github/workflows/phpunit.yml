@@ -49,7 +49,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-composer-
       - name: Install Composer Dependencies
-        run: composer install --no-interaction --prefer-dist
+        run: composer install
 
       - name: Run Unit Test
         run: composer test
