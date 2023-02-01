@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>My Sample App</title>
+  <title>My Sample App 2023</title>
 </head>
 <body>
   <table id="data-table">
