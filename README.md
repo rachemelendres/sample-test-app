@@ -1,5 +1,7 @@
 # PHP Application
 
+[![codecov](https://codecov.io/gh/rachemelendres/sample-test-app/branch/master/graph/badge.svg?token=I1DWJK2P31)](https://codecov.io/gh/rachemelendres/sample-test-app)
+
 This application is a simple PHP script that retrieves data from a CSV file and returns it as a JSON object. The data is stored in the "data" folder and the file name is "app-data.csv".
 
 ## Installation
